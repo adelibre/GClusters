@@ -6,7 +6,7 @@ library("corrplot")
 
 
 # Load data
-load("rda/galaxy.rda")
+load("rda/galaxy-wd.rda")
 
 # Select only some column of interest for this study
 column.select <- c("Type", "D", "D_u", "M_V_T", "M_V_T_u", "N_GC", "N_GC_u",
@@ -120,3 +120,5 @@ galaxy %>%
   corrplot(type="lower", method="number", col="black", 
            add=TRUE, diag=FALSE, tl.pos="n", cl.pos="n")
 ggsave("figs/CorrPlot2.pdf", plot = last_plot())
+
+save(galaxy, file = "rda/galaxy.rda")

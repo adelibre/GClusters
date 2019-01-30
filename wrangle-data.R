@@ -27,5 +27,5 @@ levels(galaxy$N_GC)[levels(galaxy$N_GC)==">3"] <- "4"
 galaxy <- galaxy %>% mutate_at(14, parse_number)
 
 
-save(galaxy, file = "rda/galaxy.rda")
+save(galaxy, file = "rda/galaxy-wd.rda")
 
